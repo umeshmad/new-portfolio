@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Umesh Maduwantha | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#e4dfff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-lowest": "#0c0e10",
+                        "secondary-container": "#00c1a7",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "primary-fixed-dim": "#c6bfff",
+                        "on-secondary": "#00382f",
+                        "tertiary": "#c8c6c5",
+                        "on-secondary-container": "#00483e",
+                        "primary": "#c6bfff",
+                        "tertiary-container": "#727171",
+                        "on-primary-container": "#faf6ff",
+                        "inverse-on-surface": "#2f3132",
+                        "on-secondary-fixed-variant": "#005045",
+                        "secondary": "#41ddc2",
+                        "outline": "#928ea0",
+                        "on-secondary-fixed": "#00201b",
+                        "on-surface-variant": "#c8c4d7",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#faf6f6",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container": "#1e2021",
+                        "inverse-surface": "#e2e2e4",
+                        "on-primary-fixed-variant": "#4029ba",
+                        "surface-tint": "#c6bfff",
+                        "surface-container-low": "#1a1c1d",
+                        "surface-container-highest": "#333537",
+                        "inverse-primary": "#5847d2",
+                        "on-primary-fixed": "#160066",
+                        "on-background": "#e2e2e4",
+                        "secondary-fixed": "#65fade",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#282a2c",
+                        "error-container": "#93000a",
+                        "surface-bright": "#37393b",
+                        "surface": "#111415",
+                        "primary-container": "#6c5ce7",
+                        "surface-dim": "#111415",
+                        "surface-variant": "#333537",
+                        "on-primary": "#2900a0",
+                        "background": "#111415",
+                        "on-tertiary": "#313030",
+                        "on-surface": "#e2e2e4",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#474554",
+                        "secondary-fixed-dim": "#41ddc2",
+                        "on-tertiary-fixed": "#1c1b1b"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        "section-gap": "160px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-mobile": "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "display-hero": ["Playfair Display"],
+                        "display-hero-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Space Grotesk"],
+                        "label-caps": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-hero": ["84px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-hero-mobile": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    },
+                    animation: {
+                        'spin-slow': 'spin 20s linear infinite',
+                        'spin-reverse-slow': 'spin-reverse 20s linear infinite',
+                    },
+                    keyframes: {
+                        'spin-reverse': {
+                            '0%': { transform: 'rotate(0deg)' },
+                            '100%': { transform: 'rotate(-360deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+
+            color: #e2e2e4;
+        }
+
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid #2E2E32;
+        }
+
+        .premium-card {
+            background: #141414;
+            border: 1px solid #2E2E32;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 24px;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: #6c5ce7;
+            box-shadow: 0 10px 40px -10px rgba(108, 92, 231, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6c5ce7 0%, #41ddc2 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(108, 92, 231, 0.3);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.6s ease;
+        }
+
+        .btn-primary:hover::after {
+            left: 200%;
+        }
+
+        .btn-glass {
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid #2E2E32;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-glass:hover {
+            border-color: #6c5ce7;
+            color: #c6bfff;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #c6bfff 0%, #41ddc2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-scrolled {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(20px) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .orbit-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 50%;
+        }
+
+        .orbit-item {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background: #141414;
+            border: 1px solid #2E2E32;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+            animation: spin-reverse-slow 20s linear infinite;
+        }
+
+        .edu-timeline {
+            position: relative;
+
+            padding-left: 56px;
+        }
+
+        .edu-timeline::before {
+            content: '';
+            position: absolute;
+            left: 19px;
+
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-image: repeating-linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0.22) 0px,
+                    rgba(255, 255, 255, 0.22) 7px,
+                    transparent 7px,
+                    transparent 16px);
+            background-size: 2px 16px;
+            animation: eduDashScroll 0.9s linear infinite;
+        }
+
+        @keyframes eduDashScroll {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 16px;
+            }
+        }
+
+        .edu-item {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 44px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-node {
+            position: absolute;
+
+            left: -48px;
+            top: 3px;
+            width: 24px;
+            height: 24px;
+            background: rgba(12, 14, 18, 0.98);
+            border: 1.5px solid rgba(255, 255, 255, 0.16);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            transition: border-color 0.3s ease;
+        }
+
+        .edu-item:hover .edu-node {
+            border-color: rgba(255, 255, 255, 0.38);
+        }
+
+        .edu-node::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 2px;
+            background: #ffffff;
+        }
+
+        .edu-content {
+            flex: 1;
+        }
+
+        .edu-label {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(200, 196, 220, 0.45);
+            margin-bottom: 5px;
+        }
+
+        .edu-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #ededf0;
+            line-height: 1.25;
+            margin-bottom: 7px;
+            transition: color 0.2s ease;
+        }
+
+        .edu-item:hover .edu-title {
+            color: #ffffff;
+        }
+
+        .edu-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.72;
+            letter-spacing: 0.005em;
+            color: rgba(178, 175, 200, 0.60);
+        }
+
+        .tech-icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 8px;
+            background: rgba(20, 20, 22, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            cursor: default;
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .tech-icon-card:hover {
+            transform: translateY(-5px) scale(1.06);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(30, 30, 34, 0.9);
+        }
+
+        .tech-icon-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: rgba(200, 198, 218, 0.6);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .tech-tag {
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(220, 218, 235, 0.8);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .tech-tag:hover {
+            border-color: rgba(198, 191, 255, 0.4);
+            color: #c6bfff;
+        }
+
+        .tech-tag-accent {
+            background: rgba(65, 221, 194, 0.06);
+            border-color: rgba(65, 221, 194, 0.18);
+            color: rgba(150, 240, 220, 0.85);
+        }
+
+        .tech-tag-accent:hover {
+            border-color: rgba(65, 221, 194, 0.45);
+            color: #41ddc2;
+        }
+
+        .social-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(200, 198, 218, 0.55);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .social-btn:nth-child(1):hover {
+            border-color: #1877F2;
+            color: #1877F2;
+            background: rgba(24, 119, 242, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .social-btn:nth-child(2):hover {
+            border-color: #0A66C2;
+            color: #0A66C2;
+            background: rgba(10, 102, 194, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .social-btn:nth-child(3):hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body class="antialiased relative overflow-x-hidden selection:bg-primary-container selection:text-white">
+
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+
+        <canvas id="dots-bg" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+        <script>
+                (function () {
+                    const canvas = document.getElementById('dots-bg');
+                    const ctx = canvas.getContext('2d');
+
+                    function resize() {
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+                    }
+                    window.addEventListener('resize', resize);
+                    resize();
+
+                    const DOT_COUNT = 90;
+                    const GRID_SIZE = 90;
+                    const GRID_COLOR = 'rgba(255,255,255,0.03)';
+                    const DOT_COLOR = [255, 255, 255];
+
+                    const dots = [];
+                    for (let i = 0; i < DOT_COUNT; i++) {
+                        const r = 1.2 + Math.random() * 2.5;
+                        dots.push({
+                            x: Math.random() * window.innerWidth,
+                            y: Math.random() * window.innerHeight,
+                            r: r,
+                            vx: (Math.random() - 0.5) * 0.28,
+                            vy: (Math.random() - 0.5) * 0.28,
+                            alpha: 0.55 + Math.random() * 0.45,
+                            breathOffset: Math.random() * Math.PI * 2,
+                            breathSpeed: 0.4 + Math.random() * 0.6,
+                        });
+                    }
+
+                    let lastTime = 0;
+                    function draw(ts) {
+                        const dt = Math.min(ts - lastTime, 50);
+                        lastTime = ts;
+
+                        const W = canvas.width;
+                        const H = canvas.height;
+
+                        ctx.clearRect(0, 0, W, H);
+
+                        ctx.strokeStyle = GRID_COLOR;
+                        ctx.lineWidth = 1;
+                        for (let x = 0; x < W + GRID_SIZE; x += GRID_SIZE) {
+                            ctx.beginPath();
+                            ctx.moveTo(x, 0);
+                            ctx.lineTo(x, H);
+                            ctx.stroke();
+                        }
+                        for (let y = 0; y < H + GRID_SIZE; y += GRID_SIZE) {
+                            ctx.beginPath();
+                            ctx.moveTo(0, y);
+                            ctx.lineTo(W, y);
+                            ctx.stroke();
+                        }
+
+                        const t = ts * 0.001;
+                        for (const d of dots) {
+                            d.x += d.vx * dt * 0.06;
+                            d.y += d.vy * dt * 0.06;
+
+                            if (d.x < -10) d.x = W + 10;
+                            if (d.x > W + 10) d.x = -10;
+                            if (d.y < -10) d.y = H + 10;
+                            if (d.y > H + 10) d.y = -10;
+
+                            const breath = d.alpha * (0.7 + 0.3 * Math.sin(t * d.breathSpeed + d.breathOffset));
+
+                            const glow = ctx.createRadialGradient(d.x, d.y, 0, d.x, d.y, d.r * 6);
+                            glow.addColorStop(0, `rgba(${DOT_COLOR},${(breath * 0.5).toFixed(3)})`);
+                            glow.addColorStop(1, `rgba(${DOT_COLOR},0)`);
+                            ctx.beginPath();
+                            ctx.arc(d.x, d.y, d.r * 6, 0, Math.PI * 2);
+                            ctx.fillStyle = glow;
+                            ctx.fill();
+
+                            ctx.beginPath();
+                            ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+                            ctx.fillStyle = `rgba(${DOT_COLOR},${breath.toFixed(3)})`;
+                            ctx.fill();
+                        }
+
+                        requestAnimationFrame(draw);
+                    }
+                    requestAnimationFrame(draw);
+                })();
+        </script>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80"></div>
+    </div>
+
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl rounded-full z-50 transition-all duration-300 bg-surface/60 backdrop-blur-xl border border-white/10 shadow-[0_0_40px_rgba(108,92,231,0.15)]"
+        id="navbar">
+        <div class="flex justify-between items-center px-8 py-3 w-full">
+            <a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface" href="#">
+                UMESH<span class="text-primary-container">.</span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                    href="#work">Work</a>
+                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                    href="#skills">Skills</a>
+                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                    href="#about">About</a>
+                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                    href="#contact">Contact</a>
+            </div>
+            <a class="btn-primary px-6 py-2 font-headline-sm text-sm text-white font-semibold" href="#contact">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+    <main class="max-w-container-max mx-auto px-gutter pt-40 pb-section-gap">
+
+        <section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-between gap-16 mb-section-gap"
+            id="hero">
+            <div class="flex-1 space-y-8 z-10">
+                <div class="space-y-4">
+                    <p class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Portfolio 2024
+                    </p>
+                    <h1
+                        class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface">
+                        Umesh Maduwantha
+                    </h1>
+                    <h2 class="font-headline-lg text-headline-lg">
+                        <div class="text-on-surface mb-2 font-medium">I am a</div>
+                        <div class="text-gradient flex items-center h-[1.3em]">
+                            <span id="typewriter-text"></span><span
+                                class="w-[4px] h-[1em] bg-primary animate-pulse ml-[4px]"></span>
+                        </div>
+                    </h2>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Crafting digital experiences at the intersection of robust engineering, intuitive design, and
+                    artificial intelligence.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a class="btn-primary px-8 py-4 font-headline-sm text-sm text-white font-semibold inline-flex items-center gap-2"
+                        href="#">
+                        <span>Download CV</span>
+                        <span class="material-symbols-outlined text-lg">download</span>
+                    </a>
+                    <a class="btn-glass px-8 py-4 font-headline-sm text-sm text-on-surface font-semibold inline-flex items-center gap-2"
+                        href="#work">
+                        View Projects
+                    </a>
+                </div>
+                <div class="flex gap-4 pt-8 items-center">
+
+                    <a href="#" target="_blank" rel="noopener" title="Facebook" class="social-btn group">
+                        <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" aria-hidden="true">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener" title="LinkedIn" class="social-btn group">
+                        <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener" title="GitHub" class="social-btn group">
+                        <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" aria-hidden="true">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center items-center relative z-10">
+
+                <div class="orbit-container" style="width:620px;height:620px;">
+
+                    <div
+                        class="w-96 h-96 rounded-full overflow-hidden relative z-10 bg-[#050505] shadow-[inset_0_4px_30px_rgba(108,92,231,0.1),0_20px_50px_rgba(0,0,0,0.8)] border border-white/5 flex items-center justify-center group">
+
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(108,92,231,0.15)_0%,transparent_70%)]">
+                        </div>
+
+                        <img src="assets/profile-nobg.png" alt="Umesh"
+                            class="relative w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                            style="filter: drop-shadow(0 20px 25px rgba(0,0,0,0.9));" />
+                    </div>
+
+                    <div class="orbit-ring w-[460px] h-[460px] animate-spin-slow">
+
+                        <div class="orbit-item" style="top:-24px; left:calc(50% - 24px);">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                                <circle cx="12" cy="12" r="2.5" fill="#61DAFB" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2"
+                                    fill="none" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+                                    transform="rotate(60 12 12)" />
+                                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+                                    transform="rotate(120 12 12)" />
+                            </svg>
+                        </div>
+
+                        <div class="orbit-item" style="bottom:-24px; left:calc(50% - 24px);">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="#83CD29">
+                                <path d="M12 2L3 7v10l9 5 9-5V7L12 2zm0 2.18L19 8.1v7.8L12 19.82 5 15.9V8.1l7-3.92z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="orbit-ring w-[600px] h-[600px] border-secondary/20 animate-spin-slow"
+                        style="animation-direction:reverse; animation-duration:28s;">
+
+                        <div class="orbit-item border-secondary/50" style="top:64px; right:64px;">
+                            <svg viewBox="0 0 24 24" width="22" height="22">
+                                <path
+                                    d="M12 2C9.27 2 9 3.33 9 4.5V6h6v1H7C5.35 7 4 8.35 4 10v3c0 1.65 1.35 3 3 3h1v-2H7c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h10c1.65 0 3-1.35 3-3V5c0-1.65-1.35-3-3-3h-5z"
+                                    fill="#3776AB" />
+                                <path
+                                    d="M12 22c2.73 0 3-1.33 3-2.5V18H9v-1h8c1.65 0 3-1.35 3-3v-3c0-1.65-1.35-3-3-3h-1v2h1c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1H7c-1.65 0-3 1.35-3 3v2.5C4 20.67 4.27 22 7 22h5z"
+                                    fill="#FCD53F" />
+                            </svg>
+                        </div>
+
+                        <div class="orbit-item border-secondary/50" style="bottom:64px; right:64px;">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="#4DB33D">
+                                <path
+                                    d="M12 2C8 2 6 5.5 6 9c0 2.5 1 4.5 2.5 6l.5 7h6l.5-7C17 14.5 18 12.5 18 10c0-3.5-2-8-6-8z" />
+                            </svg>
+                        </div>
+
+                        <div class="orbit-item" style="top:64px; left:64px;">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="white">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5V7.5l6 4.5-6 4.5z" />
+                            </svg>
+                        </div>
+
+                        <div class="orbit-item" style="bottom:64px; left:64px;">
+                            <svg viewBox="0 0 24 24" width="22" height="22">
+                                <rect width="24" height="24" rx="3" fill="#3178C6" />
+                                <text x="4" y="17" font-size="10" font-weight="bold" fill="white"
+                                    font-family="sans-serif">TS</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mb-section-gap scroll-mt-32" id="about">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div
+                        class="aspect-square rounded-[2rem] overflow-hidden relative z-10 flex flex-col bg-[#0d1117] border border-white/10 shadow-[0_0_50px_rgba(108,92,231,0.15)] group transition-transform duration-500 hover:scale-[1.02]">
+
+                        <div class="flex items-center px-4 py-3 bg-[#161b22] border-b border-white/5 relative">
+                            <div class="flex gap-2 absolute left-4">
+                                <div class="w-3 h-3 rounded-full bg-[#ff5f56] border border-[#e0443e]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#ffbd2e] border border-[#dea123]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#27c93f] border border-[#1aab29]"></div>
+                            </div>
+                            <div class="w-full text-center text-xs font-mono text-white/40 font-medium">train_model.py
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-6 md:p-8 text-[13px] sm:text-[14px] md:text-[15px] font-mono leading-[1.8] overflow-hidden text-left flex-1 bg-[#0d1117] flex items-center justify-center">
+                            <pre
+                                class="m-0 w-full"><code class="language-python text-[#c9d1d9] text-[11px] sm:text-[12px] md:text-[13px] leading-tight block">
+<span class="text-[#ff7b72]">import</span> torch
+<span class="text-[#ff7b72]">import</span> torch.nn <span class="text-[#ff7b72]">as</span> nn
+<span class="text-[#ff7b72]">import</span> torch.optim <span class="text-[#ff7b72]">as</span> optim
+
+<span class="text-[#ff7b72]">class</span> <span class="text-[#d2a8ff]">NeuralCore</span>(nn.Module):
+    <span class="text-[#ff7b72]">def</span> <span class="text-[#d2a8ff]">__init__</span>(<span class="text-[#79c0ff] italic">self</span>, vocab_size, d_model<span class="text-[#ff7b72]">=</span><span class="text-[#79c0ff]">512</span>):
+        <span class="text-[#79c0ff]">super</span>().<span class="text-[#d2a8ff]">__init__</span>()
+        <span class="text-[#79c0ff] italic">self</span>.embed <span class="text-[#ff7b72]">=</span> nn.<span class="text-[#d2a8ff]">Embedding</span>(vocab_size, d_model)
+        <span class="text-[#79c0ff] italic">self</span>.attention <span class="text-[#ff7b72]">=</span> nn.<span class="text-[#d2a8ff]">MultiheadAttention</span>(d_model, <span class="text-[#79c0ff]">8</span>)
+        <span class="text-[#79c0ff] italic">self</span>.fc <span class="text-[#ff7b72]">=</span> nn.<span class="text-[#d2a8ff]">Linear</span>(d_model, vocab_size)
+
+    <span class="text-[#ff7b72]">def</span> <span class="text-[#d2a8ff]">forward</span>(<span class="text-[#79c0ff] italic">self</span>, x):
+        x <span class="text-[#ff7b72]">=</span> <span class="text-[#79c0ff] italic">self</span>.<span class="text-[#d2a8ff]">embed</span>(x)
+        x, _ <span class="text-[#ff7b72]">=</span> <span class="text-[#79c0ff] italic">self</span>.<span class="text-[#d2a8ff]">attention</span>(x, x, x)
+        <span class="text-[#ff7b72]">return</span> <span class="text-[#79c0ff] italic">self</span>.<span class="text-[#d2a8ff]">fc</span>(x)
+
+<span class="text-[#ff7b72]">def</span> <span class="text-[#d2a8ff]">train_model</span>(model, dataset, epochs<span class="text-[#ff7b72]">=</span><span class="text-[#79c0ff]">100</span>):
+    device <span class="text-[#ff7b72]">=</span> torch.<span class="text-[#d2a8ff]">device</span>(<span class="text-[#a5d6ff]">'cuda'</span> <span class="text-[#ff7b72]">if</span> torch.cuda.<span class="text-[#d2a8ff]">is_available</span>() <span class="text-[#ff7b72]">else</span> <span class="text-[#a5d6ff]">'cpu'</span>)
+    model.<span class="text-[#d2a8ff]">to</span>(device)
+    optimizer <span class="text-[#ff7b72]">=</span> optim.<span class="text-[#d2a8ff]">AdamW</span>(model.<span class="text-[#d2a8ff]">parameters</span>(), lr<span class="text-[#ff7b72]">=</span><span class="text-[#79c0ff]">3e-4</span>)
+
+    <span class="text-[#ff7b72]">for</span> epoch <span class="text-[#ff7b72]">in</span> <span class="text-[#79c0ff]">range</span>(epochs):
+        <span class="text-[#ff7b72]">for</span> x, y <span class="text-[#ff7b72]">in</span> dataset:
+            optimizer.<span class="text-[#d2a8ff]">zero_grad</span>()
+            loss <span class="text-[#ff7b72]">=</span> nn.<span class="text-[#d2a8ff]">CrossEntropyLoss</span>()(model(x), y)
+            loss.<span class="text-[#d2a8ff]">backward</span>()
+            optimizer.<span class="text-[#d2a8ff]">step</span>()
+
+        <span class="text-[#79c0ff]">print</span>(<span class="text-[#a5d6ff]">f"Epoch {epoch+</span><span class="text-[#79c0ff]">1</span><span class="text-[#a5d6ff]">} optimized. Loss: {loss.</span><span class="text-[#d2a8ff]">item</span><span class="text-[#a5d6ff]">():.4f}"</span>)</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="absolute -inset-4 bg-primary-container/20 blur-3xl -z-10 rounded-full"></div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">The Journey</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            My academic and professional journey is driven by a passion for creating intelligent,
+                            scalable systems. Bridging the gap between front-end elegance and back-end robustness.
+                        </p>
+                    </div>
+
+                    <div class="edu-timeline mt-10">
+
+                        <div class="edu-item">
+                            <div class="edu-node"></div>
+                            <div class="edu-content">
+                                <span class="edu-label">Present</span>
+                                <h4 class="edu-title">BICT Undergraduate</h4>
+                                <p class="edu-desc">Focusing on advanced software engineering principles and scalable
+                                    system architecture at Rajarata University of Sri Lanka.</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-item v2">
+                            <div class="edu-node"></div>
+                            <div class="edu-content">
+                                <span class="edu-label" style="color:#a89fff;">Concurrent</span>
+                                <h4 class="edu-title">HND in AI</h4>
+                                <p class="edu-desc">Deep dive into machine learning algorithms, data engineering, and
+                                    neural network fundamentals at BIET.</p>
+                            </div>
+                        </div>
+
+                        <div class="edu-item">
+                            <div class="edu-node"></div>
+                            <div class="edu-content">
+                                <span class="edu-label">2022</span>
+                                <h4 class="edu-title">Diploma in AI</h4>
+                                <p class="edu-desc">Completed the IIT Colombo AI PDU Diploma with a Distinction Pass, mastering advanced programming and AI modeling fundamentals.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-section-gap scroll-mt-32" id="skills">
+            <div class="text-center mb-16">
+                <p class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-3">What I Work
+                    With</p>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Technical Arsenal</h2>
+            </div>
+
+            <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-5 mb-12">
+
+                <div class="tech-icon-card group" title="React.js">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8">
+                        <circle cx="12" cy="12" r="2.5" fill="#61DAFB" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+                            transform="rotate(60 12 12)" />
+                        <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" stroke-width="1.2" fill="none"
+                            transform="rotate(120 12 12)" />
+                    </svg>
+                    <span class="tech-icon-label">React</span>
+                </div>
+
+                <div class="tech-icon-card group" title="Node.js">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8" fill="#83CD29">
+                        <path d="M12 2L3 7v10l9 5 9-5V7L12 2zm0 2.18L19 8.1v7.8L12 19.82 5 15.9V8.1l7-3.92z" />
+                    </svg>
+                    <span class="tech-icon-label">Node.js</span>
+                </div>
+
+                <div class="tech-icon-card group" title="Next.js">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8" fill="white">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5V7.5l6 4.5-6 4.5z" />
+                    </svg>
+                    <span class="tech-icon-label">Next.js</span>
+                </div>
+
+                <div class="tech-icon-card group" title="TypeScript">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8">
+                        <rect width="24" height="24" rx="3" fill="#3178C6" /><text x="4" y="17" font-size="10"
+                            font-weight="bold" fill="white" font-family="sans-serif">TS</text>
+                    </svg>
+                    <span class="tech-icon-label">TypeScript</span>
+                </div>
+
+                <div class="tech-icon-card group" title="Python">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8">
+                        <path
+                            d="M12 2C9.27 2 9 3.33 9 4.5V6h6v1H7C5.35 7 4 8.35 4 10v3c0 1.65 1.35 3 3 3h1v-2H7c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h10c1.65 0 3-1.35 3-3V5c0-1.65-1.35-3-3-3h-5z"
+                            fill="#3776AB" />
+                        <path
+                            d="M12 22c2.73 0 3-1.33 3-2.5V18H9v-1h8c1.65 0 3-1.35 3-3v-3c0-1.65-1.35-3-3-3h-1v2h1c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1H7c-1.65 0-3 1.35-3 3v2.5C4 20.67 4.27 22 7 22h5z"
+                            fill="#FCD53F" />
+                    </svg>
+                    <span class="tech-icon-label">Python</span>
+                </div>
+
+                <div class="tech-icon-card group" title="MongoDB">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8" fill="#4DB33D">
+                        <path
+                            d="M12 2C8 2 6 5.5 6 9c0 2.5 1 4.5 2.5 6l.5 7h6l.5-7C17 14.5 18 12.5 18 10c0-3.5-2-8-6-8z" />
+                    </svg>
+                    <span class="tech-icon-label">MongoDB</span>
+                </div>
+
+                <div class="tech-icon-card group" title="Tailwind CSS">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8" fill="#38BDF8">
+                        <path
+                            d="M12 6C9.6 6 8.1 7.2 7.5 9.6c.9-1.2 1.95-1.65 3.15-1.35.685.17 1.174.665 1.716 1.21C13.242 10.36 14.24 11.4 16.5 11.4c2.4 0 3.9-1.2 4.5-3.6-.9 1.2-1.95 1.65-3.15 1.35-.685-.17-1.174-.665-1.716-1.21C15.258 7.04 14.26 6 12 6zM7.5 11.4C5.1 11.4 3.6 12.6 3 15c.9-1.2 1.95-1.65 3.15-1.35.685.17 1.174.665 1.716 1.21C8.742 15.76 9.74 16.8 12 16.8c2.4 0 3.9-1.2 4.5-3.6-.9 1.2-1.95 1.65-3.15 1.35-.685-.17-1.174-.665-1.716-1.21C10.758 12.44 9.76 11.4 7.5 11.4z" />
+                    </svg>
+                    <span class="tech-icon-label">Tailwind</span>
+                </div>
+
+                <div class="tech-icon-card group" title="SQL / MySQL">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8">
+                        <ellipse cx="12" cy="6" rx="8" ry="3" fill="#E48E00" opacity=".9" />
+                        <path d="M4 6v4c0 1.66 3.58 3 8 3s8-1.34 8-3V6c0 1.66-3.58 3-8 3S4 7.66 4 6z" fill="#E48E00" />
+                        <path d="M4 10v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4c0 1.66-3.58 3-8 3s-8-1.34-8-3z"
+                            fill="#C77B00" />
+                        <path d="M4 14v4c0 1.66 3.58 3 8 3s8-1.34 8-3v-4c0 1.66-3.58 3-8 3s-8-1.34-8-3z"
+                            fill="#A86200" />
+                    </svg>
+                    <span class="tech-icon-label">SQL</span>
+                </div>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div class="premium-card p-8 flex flex-col gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-surface-container-highest rounded-xl text-primary">
+                            <span class="material-symbols-outlined">developer_mode</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface tracking-tight">Full-Stack Dev
+                            </h3>
+                            <p class="text-xs text-on-surface-variant mt-0.5">End-to-end web engineering</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">React.js</span><span class="tech-tag">Node.js</span><span
+                            class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span
+                            class="tech-tag">MongoDB</span><span class="tech-tag">Tailwind CSS</span><span
+                            class="tech-tag">SQL</span><span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+
+                <div class="premium-card p-8 flex flex-col gap-6 relative overflow-hidden group">
+                    <div
+                        class="absolute -bottom-16 -right-16 w-56 h-56 bg-secondary/10 blur-3xl rounded-full group-hover:bg-secondary/20 transition-all duration-700">
+                    </div>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="p-3 bg-surface-container-highest rounded-xl text-secondary">
+                            <span class="material-symbols-outlined">psychology</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-xl font-bold text-on-surface tracking-tight">AI &amp; Data
+                            </h3>
+                            <p class="text-xs text-on-surface-variant mt-0.5">Intelligent systems &amp; ML</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                        <span class="tech-tag tech-tag-accent">Python</span><span
+                            class="tech-tag tech-tag-accent">Machine Learning</span><span
+                            class="tech-tag tech-tag-accent">Neural Networks</span><span
+                            class="tech-tag tech-tag-accent">Data Science</span><span
+                            class="tech-tag tech-tag-accent">TensorFlow</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-section-gap scroll-mt-32" id="work">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Selected Works</h2>
+                <a class="font-label-caps text-label-caps text-primary hover:text-white transition-colors flex items-center gap-1"
+                    href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="premium-card group overflow-hidden flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A sleek, dark-mode mobile UI mockup of a Tourist Guide Application presented on a modern smartphone frame. The screen displays a high-end map interface with glowing destination markers and minimalist typography. The background is a stark, pure black studio setup with subtle violet rim lighting to emphasize the premium glassmorphism aesthetic of the app."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSGm8yW0-iT_1pr27t7HgL7heVNnoxS8TOXdYpay2kdJUW-KTQepy_94yDWrruHnFhZk2C3evgsMONuFu1P1KunhbF92Ikco7-pNB2E8yZeG7y30zl5vt0bwW-j0apR2iMmz4PsacGeb5kanvNquOOgt3cvZx1z6BDpiVtzepFoOLYDmloxv4VdHqlydcgpSaZ2oGXv6AtKSTqwdO4eAlppx5zWvvMjUlL8hvgNvXJJ8pYeIgo_yQ6JA" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Tourist Guide App</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mb-6 line-clamp-2">A comprehensive mobile
+                            companion for travelers featuring real-time data.</p>
+                        <div class="flex gap-2 mt-auto">
+                            <span class="font-label-caps text-[10px] text-outline">React Native</span>
+                            <span class="font-label-caps text-[10px] text-outline">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card group overflow-hidden flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A sophisticated web design presentation for Green Wild Safari Resort. The image shows a beautiful, dark-themed hero section of a website featuring a stylized, low-poly wireframe of a wild animal, rendered in glowing electric green and deep black. The layout uses a bento grid aesthetic with glassmorphism panels, exuding a luxury, high-tech eco-tourism vibe."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO8KIJj1B5r0jVLplAPhpc3J1a1_WnCO_sT2UCn1IOo7ouJnst_-rwLTLAYcIqGWOijm6XycgS6Z9EQ1SG0YtaUDOLxc5ZHeNbAPZatOoPOq2ufAkokT3wdyzU9mg2yt_Pkne-dkQBVfAYiTILBIipXaZAPBKf72OfjUkHA3fzwL3xtpB3-VNMFlM2jflfvU8u6b9STksM6REJv1OJFoBNzJhv2s2um4t1ajZiy7s92whU0SNcSDZwsA" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Green Wild Resort</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mb-6 line-clamp-2">Immersive web
+                            experience for a luxury eco-safari destination.</p>
+                        <div class="flex gap-2 mt-auto">
+                            <span class="font-label-caps text-[10px] text-outline">React</span>
+                            <span class="font-label-caps text-[10px] text-outline">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="premium-card group overflow-hidden flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="A highly detailed data visualization dashboard interface designed in a strict dark mode aesthetic. The screen shows complex construction database metrics, glowing bar charts in deep blues and purples, and sophisticated data tables inside translucent glass containers. The overall look is professional, technical, and aligned with cinematic minimalism."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFAiAAxZJycMKnjDhK19iUmKwxBMxBafWfC2LPy7WEXd7qyMCzNCVwUzmqzosRD8FPiFsnjHBK2w225DSUtBZbnkqTPCHOwfAcA4aLdRfklnhK8m7FjPGcomiINW4kQslPOVwz491WvYa96dfvq3e3vjjhIO0KML7wMSVObdIV_IbHMykRXswC8ubIP2X9ElBsvwRLnoDrdc3MbRG7JDO5TiB5yFfNrMKWCzmcMMymQFdN-I7qDQquAQ" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Construction DB</h3>
+                        <p class="font-body-md text-sm text-on-surface-variant mb-6 line-clamp-2">Robust relational
+                            database architecture for managing large-scale projects.</p>
+                        <div class="flex gap-2 mt-auto">
+                            <span class="font-label-caps text-[10px] text-outline">SQL</span>
+                            <span class="font-label-caps text-[10px] text-outline">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-section-gap scroll-mt-32" id="contact">
+            <div class="premium-card p-12 md:p-20 relative overflow-hidden text-center max-w-4xl mx-auto">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-2xl bg-primary-container/10 blur-[100px] rounded-full -z-10">
+                </div>
+                <h2 class="font-display-hero-mobile text-display-hero-mobile text-on-surface mb-6">Let's build the
+                    future.</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg mx-auto">
+                    Currently open for new opportunities and interesting projects. Feel free to reach out.
+                </p>
+                <form class="max-w-md mx-auto space-y-6 text-left">
+                    <div class="relative">
+                        <input
+                            class="peer w-full bg-surface-container-lowest border border-outline-variant/30 rounded-2xl px-6 py-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors placeholder-transparent"
+                            id="name" placeholder="Name" type="text" />
+                        <label
+                            class="absolute left-6 -top-2.5 bg-[#0c0e10] px-1 text-xs text-on-surface-variant transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant/50 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-primary"
+                            for="name">Name</label>
+                    </div>
+                    <div class="relative">
+                        <input
+                            class="peer w-full bg-surface-container-lowest border border-outline-variant/30 rounded-2xl px-6 py-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors placeholder-transparent"
+                            id="email" placeholder="Email" type="email" />
+                        <label
+                            class="absolute left-6 -top-2.5 bg-[#0c0e10] px-1 text-xs text-on-surface-variant transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant/50 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-primary"
+                            for="email">Email</label>
+                    </div>
+                    <button class="btn-primary w-full py-4 font-headline-sm text-sm text-white font-semibold"
+                        type="button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-20 border-t border-outline-variant/20 bg-surface-container-lowest">
+        <div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-8">
+            <div class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tighter">
+                UMESH<span class="text-primary-container">.</span>
+            </div>
+            <div class="font-body-md text-body-md text-on-tertiary-fixed-variant">
+                © 2024 UMESH. Crafted for the future.
+            </div>
+            <div class="flex gap-6">
+                <a class="text-on-tertiary-fixed-variant hover:text-secondary transition-colors duration-200"
+                    href="#">Twitter</a>
+                <a class="text-on-tertiary-fixed-variant hover:text-secondary transition-colors duration-200"
+                    href="#">LinkedIn</a>
+                <a class="text-on-tertiary-fixed-variant hover:text-secondary transition-colors duration-200"
+                    href="#">GitHub</a>
+            </div>
+            <button
+                class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/30 flex items-center justify-center text-on-surface hover:text-primary hover:border-primary transition-colors"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="material-symbols-outlined text-sm">arrow_upward</span>
+            </button>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-surface/60');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-surface/60');
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = "Full-Stack Developer";
+            const el = document.getElementById("typewriter-text");
+
+            let isDeleting = false;
+            let charIndex = 0;
+
+            function typeLoop() {
+                if (!isDeleting && charIndex <= text.length) {
+                    el.innerHTML = text.substring(0, charIndex);
+                    charIndex++;
+
+                    if (charIndex > text.length) {
+                        isDeleting = true;
+                        setTimeout(typeLoop, 2500);
+                    } else {
+                        setTimeout(typeLoop, 80);
+                    }
+                }
+                else if (isDeleting && charIndex >= 0) {
+                    el.innerHTML = text.substring(0, charIndex);
+                    charIndex--;
+
+                    if (charIndex < 0) {
+                        isDeleting = false;
+                        charIndex = 0;
+                        setTimeout(typeLoop, 800);
+                    } else {
+                        setTimeout(typeLoop, 40);
+                    }
+                }
+            }
+
+            setTimeout(typeLoop, 600);
+        });
+    </script>
+
+</body>
+
+</html>
