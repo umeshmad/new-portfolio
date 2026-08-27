@@ -435,6 +435,202 @@
             background: rgba(255, 255, 255, 0.08);
             transform: translateY(-3px);
         }
+
+        /* ─── Enhanced Navbar ─── */
+        .nav-pill {
+            position: relative;
+            overflow: visible;
+        }
+
+        /* Animated gradient border */
+        .nav-pill::before {
+            content: '';
+            position: absolute;
+            inset: -1.5px;
+            border-radius: 9999px;
+            background: linear-gradient(
+                135deg,
+                rgba(108, 92, 231, 0.7),
+                rgba(65, 221, 194, 0.5),
+                rgba(108, 92, 231, 0.15),
+                rgba(65, 221, 194, 0.7),
+                rgba(108, 92, 231, 0.5)
+            );
+            background-size: 400% 400%;
+            animation: navGradientBorder 6s ease infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            padding: 1.5px;
+            opacity: 0.45;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .nav-pill:hover::before {
+            opacity: 1;
+        }
+
+        /* Outer glow behind the navbar */
+        .nav-pill::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 9999px;
+            background: linear-gradient(
+                135deg,
+                rgba(108, 92, 231, 0.12),
+                rgba(65, 221, 194, 0.08),
+                rgba(108, 92, 231, 0.05)
+            );
+            background-size: 400% 400%;
+            animation: navGradientBorder 6s ease infinite;
+            filter: blur(18px);
+            opacity: 0.6;
+            z-index: -2;
+            transition: opacity 0.4s ease;
+        }
+
+        .nav-pill:hover::after {
+            opacity: 1;
+            filter: blur(24px);
+        }
+
+        @keyframes navGradientBorder {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Shimmer sweep across the navbar */
+        .nav-shimmer {
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .nav-shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                105deg,
+                transparent 30%,
+                rgba(198, 191, 255, 0.04) 45%,
+                rgba(198, 191, 255, 0.08) 50%,
+                rgba(198, 191, 255, 0.04) 55%,
+                transparent 70%
+            );
+            animation: navShimmer 5s ease-in-out infinite;
+        }
+
+        @keyframes navShimmer {
+            0% { left: -150%; }
+            40% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* Nav link hover underline */
+        .nav-link {
+            position: relative;
+            padding: 6px 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6c5ce7, #41ddc2);
+            border-radius: 2px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(108, 92, 231, 0.6), 0 0 20px rgba(108, 92, 231, 0.2);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Soft radial glow behind hovered link */
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            inset: -8px -14px;
+            border-radius: 14px;
+            background: radial-gradient(ellipse at center, rgba(108, 92, 231, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .nav-link:hover::before {
+            opacity: 1;
+        }
+
+        /* Logo pulsing dot */
+        .logo-dot {
+            display: inline-block;
+            animation: logoPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes logoPulse {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(108, 92, 231, 0.8), 0 0 16px rgba(108, 92, 231, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                text-shadow: 0 0 14px rgba(65, 221, 194, 1), 0 0 28px rgba(65, 221, 194, 0.5);
+                transform: scale(1.3);
+            }
+        }
+
+        /* Hire Me button glow */
+        .hire-btn {
+            position: relative;
+            animation: hireGlow 3s ease-in-out infinite;
+        }
+
+        .hire-btn::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #6c5ce7, #41ddc2, #6c5ce7);
+            background-size: 200% 200%;
+            animation: navGradientBorder 4s ease infinite;
+            z-index: -1;
+            opacity: 0;
+            filter: blur(8px);
+            transition: opacity 0.3s ease;
+        }
+
+        .hire-btn:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes hireGlow {
+            0%, 100% { box-shadow: 0 0 16px rgba(108, 92, 231, 0.25), 0 0 32px rgba(108, 92, 231, 0.08); }
+            50% { box-shadow: 0 0 22px rgba(108, 92, 231, 0.45), 0 0 44px rgba(65, 221, 194, 0.15); }
+        }
+
+        /* Nav scrolled state enhancement */
+        .nav-scrolled.nav-pill::before {
+            opacity: 0.7;
+        }
+
+        .nav-scrolled.nav-pill::after {
+            opacity: 0.4;
+        }
     </style>
 </head>
 
@@ -535,23 +731,25 @@
         <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80"></div>
     </div>
 
-    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl rounded-full z-50 transition-all duration-300 bg-surface/60 backdrop-blur-xl border border-white/10 shadow-[0_0_40px_rgba(108,92,231,0.15)]"
+    <nav class="nav-pill fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl rounded-full z-50 transition-all duration-500 bg-[rgba(8,8,12,0.65)] backdrop-blur-2xl border-0"
         id="navbar">
-        <div class="flex justify-between items-center px-8 py-3 w-full">
-            <a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface" href="#">
-                UMESH<span class="text-primary-container">.</span>
+        <!-- Shimmer sweep -->
+        <div class="nav-shimmer"></div>
+        <div class="flex justify-between items-center px-8 py-3.5 w-full relative z-10">
+            <a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface group" href="#">
+                UMESH<span class="text-primary-container logo-dot">.</span>
             </a>
-            <div class="hidden md:flex gap-8 items-center">
-                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+            <div class="hidden md:flex gap-9 items-center">
+                <a class="nav-link font-headline-sm text-lg text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="#work">Work</a>
-                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                <a class="nav-link font-headline-sm text-lg text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="#skills">Skills</a>
-                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                <a class="nav-link font-headline-sm text-lg text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="#about">About</a>
-                <a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95"
+                <a class="nav-link font-headline-sm text-lg text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="#contact">Contact</a>
             </div>
-            <a class="btn-primary px-6 py-2 font-headline-sm text-sm text-white font-semibold" href="#contact">
+            <a class="hire-btn btn-primary px-7 py-2.5 font-headline-sm text-sm text-white font-semibold tracking-wide" href="#contact">
                 Hire Me
             </a>
         </div>
